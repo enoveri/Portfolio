@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #05192d;
+  --secondary: #03ef62;
+  --accent: #4d5bff;
+  --accent-transparent: rgba(77, 91, 255, 0.15);
+  --text: #f5f5f5;
+  --dark-bg: #0a0e17;
+  --card-bg: #121a29;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Common Components */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, #0f2d4a 100%);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(3, 239, 98, 0.2);
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(3, 239, 98, 0.4);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.accent-glow {
+  box-shadow: 0 0 15px rgba(3, 239, 98, 0.5);
+}
+
+.grid-pattern {
+  background-image: radial-gradient(var(--card-bg) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Add these styles to your App.css */
+section {
+  width: 100%;
+  max-width: 100%;
+}
